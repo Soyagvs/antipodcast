@@ -1,7 +1,7 @@
 ---
 interface Props {
-	title: string;
-	description: string
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
@@ -9,14 +9,25 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="{description}" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
-	</head>
-	<body class="bg-[#03061A] text-white">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="{description}" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-[#03061A] text-white">
+	<img src="/img/bg.jpg" alt="" class="absolute -z-[1000] bg-no-repeat opacity-[50%] top-0">
+    <slot />
+  </body>
 </html>
+<!-- <style is:global>
+  body {
+    background-image: url("/img/bg.jpg");
+    background-size:cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+	z-index: -11110;
+	backdrop-filter: blur(8px);
+  }
+</style> -->
