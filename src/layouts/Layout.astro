@@ -17,7 +17,7 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="bg-[#03061A] text-white">
-	<img src="/img/bg.webp" alt="" class="absolute -z-[1000] bg-no-repeat opacity-[50%] top-0">
+	<img src="/img/bg.webp" alt="" class="absolute -z-[1000] opacity-[50%] top-0 overflow-hidden">
     <slot />
   </body>
 </html>
